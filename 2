@@ -1,19 +1,17 @@
+#include "stdafx.h"
 #include <iostream>
 #include <string>
 using namespace std;
 int main()
 {
-	//string str;
-	//str[0] = 'q';
-	//str[1] = (char)32;
-	char str[100],s ='';
+	string str,str1;
 	cin >> str;
-	//int n = str.size(),spase=0;
-	
-	for (int i=0;i<strlen(str);i++) {
-		cout << str[i];
-		if (str[i] == s) {
-			cout << endl;
-		}
+	char c;
+	int n = str.size();
+	str1.resize(n * 2, ' ');
+	for (int i = 0,j=0;i < n;i++,j++) {
+		str1[j] = str[i];
+		j++;
 	}
+	cout << str1 << endl;
 }
