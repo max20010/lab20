@@ -4,14 +4,26 @@
 using namespace std;
 int main()
 {
+	setlocale(LC_ALL, "ru");
 	string str,str1;
-	cin >> str;
 	char c;
-	int n = str.size();
-	str1.resize(n * 2, ' ');
+	cout << "Введите строку: ";
+	cin >> str;
+	cout << "Введите символ: ";
+	cin >> c;
+	int n = str.size(),x=0;
+	for (int i = 0;i < n;i++) {
+		if (str[i] == c) {
+			x++;
+		}
+	}
+	str1.resize(n +x, ' ');
 	for (int i = 0,j=0;i < n;i++,j++) {
 		str1[j] = str[i];
-		j++;
+		if (str[i] == c) {
+			j++;
+			str1[j] = c;
+		}
 	}
 	cout << str1 << endl;
 }
