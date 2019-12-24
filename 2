@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	//string str;
+	//str[0] = 'q';
+	//str[1] = (char)32;
+	char str[100],s ='';
+	cin >> str;
+	//int n = str.size(),spase=0;
+	
+	for (int i=0;i<strlen(str);i++) {
+		cout << str[i];
+		if (str[i] == s) {
+			cout << endl;
+		}
+	}
+}
